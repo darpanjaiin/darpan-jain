@@ -241,7 +241,7 @@ h2 {
 }
 
 .gmail-icon .tooltip {
-    position: absolute;
+    position: relative;
     bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
@@ -264,7 +264,7 @@ h2 {
 
 .gmail-icon .tooltip.show {
     opacity: 1;
-    visibility: hidden;
+    visibility: visible;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
