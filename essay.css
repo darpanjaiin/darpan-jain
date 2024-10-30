@@ -1,8 +1,11 @@
 :root {
     --primary-font: 'Poppins', sans-serif;
-    --text-color: #111;
-    --link-color: #000080;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
     --background: #fff;
+    --accent-primary: #3498db;
+    --accent-secondary: #74b9ff;
+    --link-color: var(--accent-primary);
 }
 
 body {
@@ -39,7 +42,7 @@ body {
 }
 
 .essay-header h1 {
-    color: #333;
+    color: var(--text-primary);
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -52,13 +55,15 @@ body {
 }
 
 .essay-content {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 680px;
+    margin: 0 auto;
 }
 
 .essay-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
 }
 
 .essay-content strong {
@@ -70,8 +75,22 @@ body {
         padding: 1rem;
     }
     
-    h1 {
-        font-size: 1.8rem;
+    .essay-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .essay-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .essay-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .essay-date {
+        font-size: 0.9rem;
     }
 }
 
@@ -88,13 +107,13 @@ body {
 
 .back-link {
     margin-top: 1rem;
-    color: var(--link-color);
+    color: var(--accent-primary);
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .back-link:hover {
-    text-decoration: underline;
+    color: var(--accent-secondary);
 }
 
 .essay-image {
@@ -127,4 +146,43 @@ body {
     .essay-image {
         width: 80%;
     }
+}
+
+blockquote {
+    border-left: 3px solid var(--accent-tertiary);
+    padding-left: 1rem;
+    margin: 2rem 0;
+    color: var(--text-secondary);
+}
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content p {
+    color: var(--text-primary);
+    margin: 0.5rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }

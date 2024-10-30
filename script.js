@@ -8,76 +8,68 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Custom cursor
-const cursor = document.createElement('div');
-cursor.classList.add('custom-cursor');
-document.body.appendChild(cursor);
-
-// Update cursor position
-document.addEventListener('mousemove', (e) => {
-    requestAnimationFrame(() => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-});
-
-// Cursor interaction with interactive elements
-document.querySelectorAll('a, button, input').forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        cursor.classList.add('expanded');
-    });
-    
-    element.addEventListener('mouseleave', () => {
-        cursor.classList.remove('expanded');
-    });
-});
-
-// Add this to your existing script.js
-
-async function handleSubmit(event) {
-    event.preventDefault();
-    
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const submitButton = event.submitter;
-    const originalButtonText = submitButton.textContent;
-    
-    // Show loading state
-    submitButton.textContent = 'Sending...';
-    submitButton.disabled = true;
-
-    try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbxhXCQ6EkA41QtLpGl6LhhcC5khLbA2zKQRuKxk7jBsktE7IHZ0k6g06QUxsNcTGkr5RQ/exec', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email: email,
-                message: message,
-                timestamp: new Date().toISOString()
-            })
+document.addEventListener('DOMContentLoaded', function() {
+    // Profile image tilt effect
+    const profileImage = document.querySelector('.profile-image');
+    if (profileImage) {
+        profileImage.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = profileImage.getBoundingClientRect();
+            const x = (e.clientX - left) / width - 0.5;
+            const y = (e.clientY - top) / height - 0.5;
+            
+            const img = profileImage.querySelector('img');
+            if (img) {
+                img.style.transform = `
+                    perspective(1000px)
+                    rotateY(${x * 10}deg)
+                    rotateX(${-y * 10}deg)
+                    scale(1.05)
+                `;
+            }
         });
 
-        // Clear form
-        document.getElementById('contactForm').reset();
-        
-        // Show success message
-        submitButton.textContent = 'Sent!';
-        setTimeout(() => {
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-        }, 2000);
-
-    } catch (error) {
-        console.error('Error:', error);
-        submitButton.textContent = 'Error';
-        setTimeout(() => {
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-        }, 2000);
+        profileImage.addEventListener('mouseleave', () => {
+            const img = profileImage.querySelector('img');
+            if (img) {
+                img.style.transform = 'none';
+            }
+        });
     }
 
-    return false;
-}
+    // Simple Gmail copy functionality
+    const gmailIcons = document.querySelectorAll('.gmail-icon');
+    
+    gmailIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            // Create temporary textarea
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = 'acadarpanjain@gmail.com';
+            document.body.appendChild(tempTextArea);
+            
+            // Select and copy
+            tempTextArea.select();
+            document.execCommand('copy');
+            
+            // Remove temporary element
+            document.body.removeChild(tempTextArea);
+            
+            // Show feedback
+            const tooltip = this.querySelector('.tooltip');
+            if (tooltip) {
+                const originalText = tooltip.textContent;
+                tooltip.textContent = 'Copied!';
+                tooltip.style.opacity = '1';
+                tooltip.style.visibility = 'visible';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    tooltip.textContent = originalText;
+                    if (!icon.matches(':hover')) {
+                        tooltip.style.opacity = '0';
+                        tooltip.style.visibility = 'hidden';
+                    }
+                }, 2000);
+            }
+        });
+    });
+});

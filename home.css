@@ -1,17 +1,20 @@
 :root {
     --primary-font: 'Poppins', sans-serif;
-    --primary-color: #000;
-    --secondary-color: #666;
-    --background-color: #fff;
-    --link-color: #000080;
+    --text-primary: #000000;
+    --text-secondary: #404040;
+    --background: #ffffff;
+    --border-color: #e0e0e0;
+    --hover-color: #f5f5f5;
+    --button-color: #000000;
+    --link-color: rgb(0, 0, 153);
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: var(--primary-font);
-    background-color: var(--background-color);
-    color: var(--primary-color);
+    background-color: var(--background);
+    color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,29 +29,19 @@ header {
 .header-logo {
     height: 60px;
     width: auto;
-    transition: transform 0.3s ease;
-}
-
-.header-logo:hover {
-    transform: scale(1.05);
 }
 
 .about-btn {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    background-color: var(--button-color);
+    color: white;
     padding: 0.5rem 1.2rem;
     border-radius: 100px;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: opacity 0.2s ease;
-}
-
-.about-btn:hover {
-    opacity: 0.8;
 }
 
 .container {
@@ -73,12 +66,16 @@ header {
     margin: 0 auto 1.5rem;
     border-radius: 24px;
     overflow: hidden;
+    position: relative;
+    perspective: 1000px;
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
 }
 
 h1 {
@@ -90,7 +87,7 @@ h1 {
 
 h2 {
     font-size: 1.25rem;
-    color: var(--secondary-color);
+    color: var(--text-secondary);
     font-weight: 400;
     margin: 0.5rem 0 1rem;
 }
@@ -103,29 +100,15 @@ h2 {
     margin: 1rem 0;
 }
 
-.social-icon {
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-2px);
-}
-
 .social-logo {
     width: 28px;
     height: 28px;
     object-fit: contain;
+    transition: transform 0.2s ease;
 }
 
-.social-text {
-    font-size: 0.95rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.social-text:hover {
-    color: #555;
+.social-logo:hover {
+    transform: translateY(-2px);
 }
 
 .blog-preview {
@@ -140,7 +123,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--text-primary);
     text-align: center;
 }
 
@@ -154,42 +137,46 @@ h2 {
 }
 
 .blog-preview a {
-    text-decoration: none;
     color: var(--link-color);
-    font-weight: 200;
-    line-height: 1.6;
-    transition: color 0.2s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.blog-preview a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .blog-preview a:hover {
-    text-decoration: underline;
+    color: red;
+}
+
+.blog-preview a:hover::after {
+    transform: scaleX(1);
 }
 
 .contact-section {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     margin: 2rem auto;
-    text-align: left;
-}
-
-.contact-section h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .form-row {
     display: flex;
-    background-color: #f5f5f5;
+    align-items: center;
+    background-color: var(--hover-color);
     border-radius: 12px;
     margin-bottom: 1rem;
     overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.form-row:hover {
-    transform: translateY(-2px);
+    border: 1px solid var(--border-color);
 }
 
 .contact-section input {
@@ -197,33 +184,102 @@ h2 {
     border: none;
     outline: none;
     flex: 1;
-    background-color: #f5f5f5;
+    background-color: transparent;
     font-family: var(--primary-font);
     font-size: 0.95rem;
 }
 
 .contact-section button {
     padding: 0.8rem 1.2rem;
-    background-color: #f5f5f5;
-    color: var(--primary-color);
+    background-color: var(--button-color);
+    color: white;
     border: none;
-    border-left: 1px solid #ddd;
     cursor: pointer;
     font-family: var(--primary-font);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    transition: background-color 0.2s ease;
+    text-align: center;
+    min-width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content p {
+    color: var(--text-primary);
+    margin: 0.5rem 0;
+}
+
+.footer .social-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.footer .social-logo:hover {
+    transform: translateY(-2px);
+}
+
+.gmail-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.gmail-icon .tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #666;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    user-select: text;
 }
 
-.contact-section button:hover {
-    background-color: #e0e0e0;
+.gmail-icon:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
 }
 
-.header-logo.large {
-    height: 80px;
-    width: auto;
-    margin: 1rem 0;
+.gmail-icon .tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gmail-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.gmail-icon:hover img {
+    transform: translateY(-2px);
+}
+
+.tooltip.success {
+    background-color: #16a085;
 }
 
 @media (max-width: 768px) {
@@ -239,4 +295,4 @@ h2 {
     h1 {
         font-size: 2rem;
     }
-} 
+}

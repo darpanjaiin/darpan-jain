@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - CA Darpan Jain</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,16 +17,157 @@
     </nav>
 
     <main class="about-container">
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>About Me</h1>
-                <div class="intro-text">
-                    <p>I'm a qualified Chartered Accountant having cracked all the levels of CA in the very first attempt with distinction. On top of that, i have also cracked CFA Level 1 scoring amongst the top 10 percentile of the world. (90+ percentile)</p>
-                    <p>When I'm not crunching numbers or studying, you'll find me playing cricket, surfboarding at Kerala, trekking through north indian mountains, or scuba diving to explore the marine acquatic world. I believe in balancing professional growth with personal adventures because in my view that's what makes life worth living.</p>
-                    <p class="connect-link"><a href="index.html#contact">Get in Touch →</a></p>
+        <!-- My Story Section -->
+        <section class="content-section" id="story">
+            <h1>My Story</h1>
+            <div class="story-grid">
+                <div class="story-image">
+                    <img src="./assets/snow.jpg" alt="Character" class="character-icon rounded-image">
+                    <p class="image-caption">Captured at Chopta, Uttarakhand ~ Dec 2021</p>
+                </div>
+                <div class="quote-section">
+                    <blockquote>
+                        "Do not pray for an easy life, pray for the <span class="highlight">strength</span> to endure a difficult one"
+                        <footer>― Bruce Lee</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="story-content">
+                <p>I'm a qualified Chartered Accountant having cracked all the levels of CA in the very first attempt with distinction. On top of that, I have also cracked CFA Level 1 scoring amongst the top 10 percentile of the world. (90+ percentile)</p>
+                <p>When I'm not crunching numbers or studying, you'll find me playing cricket, surfboarding at Kerala, trekking through north Indian mountains, or scuba diving to explore the marine aquatic world. I believe in balancing professional growth with personal adventures because in my view that's what makes life worth living.</p>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Qualifications Section -->
+            <section class="content-section" id="qualifications">
+                <h2>Educational Qualifications</h2>
+                <div class="qualification-card">
+                    <img src="./assets/ca.png" alt="Chartered Accountant Icon" class="icon" style="width: 70px; height: 50px; border-radius: 0;">
+                    <h3>Chartered Accountant (2024)</h3>
+                    <ul>
+                        <li>First Attempt (all levels)</li>
+                        <li>18 exemptions throughout</li>
+                    </ul>
+                </div>
+                <hr class="divider">
+                <div class="qualification-card">
+                    <img src="./assets/cfa.png" alt="CFA Icon" class="icon" style="width: 70px; height: 50px; border-radius: 0;">
+                    <h3>CFA Level 1 (2022)</h3>
+                    <ul>
+                        <li>Pursuing Level 2</li>
+                        <li>Top 10 percentile globally (90+ percentile)</li>
+                    </ul>
+                </div>
+                <hr class="divider">
+                <div class="qualification-card">
+                    <img src="./assets/bcom.png" alt="Bachelors Icon" class="icon" style="width: 80px; height: 60px; border-radius: 0;">
+                    <h3>Bachelors (Commerce)</h3>
+                    <ul>
+                        <li>Graduated in 2022</li>
+                        <li>First Class Distinction</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="content-section" id="experience">
+                <h2>Work Experience</h2>
+                <div class="experience-card">
+                    <img src="./assets/deloitte.png" alt="Deloitte Icon" class="icon" style="width: 80px; height: auto; border-radius: 0;">
+                    <h3>Assistant Manager</h3>
+                    <span class="company">Deloitte</span>
+                    <span class="duration">April 2024 - September 2024</span>
+                    <ul>
+                        <li>Audited business processes, controls, and financial statements</li>
+                        <li>Worked with multinational corporations (USA & Israel) and Indian giants</li>
+                    </ul>
+                </div>
+                <hr class="divider">
+                <div class="experience-card">
+                    <img src="./assets/kja.jpg" alt="Khandelwal Jain Icon" class="icon rounded-image" style="width: 60px; height: 40px;">
+                    <h3>CA Intern</h3>
+                    <span class="company">Khandelwal Jain & Associates</span>
+                    <span class="duration">March 2021 - March 2024</span>
+                    <ul>
+                        <li>Specialized in real estate and construction sector audits</li>
+                        <li>Led statutory, internal audits and tax assignments</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- What I Love Section -->
+        <section class="content-section" id="interests">
+            <h2>What I Love</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=300&h=300&fit=crop" alt="Surfing" class="rounded-image">
+                    </div>
+                    <h3>Surfing</h3>
+                    <p>Undertook a surfing training program at Mulki. Surfed at Kerala, Karnataka & Maldives</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=300&h=300&fit=crop" alt="Cricket" class="rounded-image">
+                    </div>
+                    <h3>Cricket</h3>
+                    <p>Left handed batsman. Love to participate in local tournaments</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=300&h=300&fit=crop" alt="Martial Arts" class="rounded-image">
+                    </div>
+                    <h3>Martial Arts</h3>
+                    <p>Trained in Muay Thai and Calisthenics</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=300&h=300&fit=crop" alt="Portrait Drawing" class="rounded-image">
+                    </div>
+                    <h3>Portrait Drawing</h3>
+                    <p>Love to sketch human faces</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=300&fit=crop" alt="Reading" class="rounded-image">
+                    </div>
+                    <h3>Reading</h3>
+                    <p>Finance & Philosophy enthusiast</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop" alt="Travel" class="rounded-image">
+                    </div>
+                    <h3>Travel</h3>
+                    <p>Explored 14 states in India and 1 country abroad</p>
                 </div>
             </div>
         </section>
+
+        <div class="connect-link">
+            <a href="index.html#contact">Get in Touch →</a>
+        </div>
     </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Made by CA Darpan Jain</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/cadarpanjain/" target="_blank" class="social-icon">
+                    <img src="./assets/linkedin logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://x.com/Darpanjaiin" target="_blank" class="social-icon">
+                    <img src="./assets/x logo.png" alt="X (Twitter)" class="social-logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add script.js to enable the copy functionality -->
+    <script src="./script.js"></script>
 </body>
 </html> 
