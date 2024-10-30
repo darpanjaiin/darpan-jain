@@ -1,0 +1,226 @@
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --text-primary: #fff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.hero-section.fullscreen {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glowing-text {
+    font-size: 4.5rem;
+    margin: 0 0 3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.intro-text {
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 4rem;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.hero-background {
+    transition: transform 0.5s ease-out;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .glowing-text {
+        font-size: 3rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Add smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+.hero-section {
+    background-color: #ffffff;
+    padding-top: 100px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    font-size: 3rem;
+    margin: 0 0 3rem;
+    font-weight: 600;
+}
+
+.intro-text {
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #000;
+}
+
+.intro-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Add to your existing styles.css */
+.connect-link {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.connect-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.connect-link a:hover {
+    opacity: 0.8;
+    padding-right: 5px;
+}
+
+/* Update logo styles */
+.header-logo.large {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}

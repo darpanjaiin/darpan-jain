@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Darpan Jain</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.png" alt="Logo" class="header-logo large">
+        </a>
+        <a href="about.html" class="about-btn">About Me</a>
+    </header>
+    
+    <main class="container">
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="./assets/profile.png" alt="CA Darpan Jain">
+            </div>
+            <h1>CA Darpan Jain</h1>
+            <h2>A Human Being</h2>
+            
+            <nav class="social-links">
+                <a href="https://www.linkedin.com/in/cadarpanjain/" class="social-icon">
+                    <img src="./assets/linkedin logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://x.com/Darpanjaiin" class="social-icon">
+                    <img src="./assets/x logo.png" alt="X (Twitter)" class="social-logo">
+                </a>
+            </nav>
+        </div>
+
+        <section class="blog-preview">
+            <h3>Essays</h3>
+            <ul>
+                <li><a href="essay1.html">Before the handstand</a></li>
+                <li><a href="essay2.html">Crushing CA in first shot : How Manifestation works</a></li>
+                <li><a href="essay3.html">A Night to Remember: The Bioluminescent Kayak Adventure</a></li>
+            </ul>
+        </section>
+
+        <footer class="contact-section" id="contact">
+            <h3>Get in touch</h3>
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                <div class="form-row">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" id="connectBtn">Connect</button>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="message" name="message" placeholder="Enter your message" required>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </footer>
+    </main>
+</body>
+</html> 
