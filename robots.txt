@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://darpanjain.life/sitemap.xml
+
+# Allow all robots complete access
+Disallow:
+
+# Prevent caching of forms
+Disallow: /form-results/
+
+# Optimize crawling
+Crawl-delay: 1 
