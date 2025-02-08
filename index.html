@@ -1,150 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-494SJ4J95D"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-494SJ4J95D');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>CA Darpan Jain | Chartered Accountant | Pune</title>
-    <meta name="title" content="CA Darpan Jain - Chartered Accountant & Financial Expert | Pune">
-    <meta name="description" content="CA Darpan Jain - A distinguished Chartered Accountant from Pune who cleared CA in first attempt. Expertise in auditing, taxation, and financial consulting. CFA Level 1 scorer in top 10% globally.">
-    <meta name="keywords" content="CA Darpan Jain, Chartered Accountant Pune, CA First Attempt, CFA Level 1, Financial Expert Pune, Best CA in Pune, Auditing Expert, Tax Consultant">
-    <meta name="author" content="CA Darpan Jain">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://darpanjain.life/">
-    <meta property="og:title" content="CA Darpan Jain - Chartered Accountant">
-    <meta property="og:description" content="Distinguished Chartered Accountant from Pune. First attempt CA with distinction. CFA Level 1 scorer in top 10% globally. Expertise in auditing & taxation.">
-    <meta property="og:image" content="https://darpanjain.life/assets/profile.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://darpanjain.life/">
-    <meta property="twitter:title" content="CA Darpan Jain - Chartered Accountant">
-    <meta property="twitter:description" content="Distinguished Chartered Accountant from Pune. First attempt CA with distinction. CFA Level 1 scorer in top 10% globally. Expertise in auditing & taxation.">
-    <meta property="twitter:image" content="https://darpanjain.life/assets/profile.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/logo.png">
-    <link rel="apple-touch-icon" href="./assets/logo.png">
-
-    <!-- Existing stylesheet links -->
-    <link rel="stylesheet" href="./home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "CA Darpan Jain",
-        "jobTitle": "Chartered Accountant",
-        "description": "Distinguished Chartered Accountant from Pune who cleared CA in first attempt with distinction. CFA Level 1 scorer in top 10% globally.",
-        "image": "https://darpanjain.life/assets/profile.png",
-        "url": "https://darpanjain.life/",
-        "sameAs": [
-            "https://www.linkedin.com/in/cadarpanjain/",
-            "https://x.com/Darpanjaiin"
-        ],
-        "email": "acadarpanjain@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Pune",
-            "addressRegion": "Maharashtra",
-            "addressCountry": "India"
-        },
-        "alumniOf": {
-            "@type": "Organization",
-            "name": "Institute of Chartered Accountants of India"
+    <title>Portfolio | Darpan Jain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    </script>
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 5vh 5vw;
+            background-color: white;
+            color: #000;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 60px;
+        }
+
+        .main-content {
+            padding-right: 20px;
+        }
+
+        .header {
+            margin-bottom: 40vh;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .portfolio-title {
+            font-size: 6rem;
+            font-weight: 400;
+            letter-spacing: -2px;
+        }
+
+        .name-bold {
+            font-weight: 600;
+        }
+
+        .name-light {
+            font-weight: 100;
+            color: #666;
+        }
+
+        .year {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .info {
+            margin-top: auto;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 1.5rem;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .social-links a, .gmail-tooltip {
+            color: #666;
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: color 0.3s ease;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a:hover, .gmail-tooltip:hover {
+            color: #000;
+        }
+
+        .x-logo {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .gmail-tooltip {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gmail-tooltip .tooltip-text {
+            visibility: hidden;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.875rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gmail-tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background: #e0e0e0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #666;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            background: #000;
+            transform: scale(1.2);
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .timeline-title {
+            font-size: 1.125rem;
+            color: #000;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            font-size: 0.875rem;
+            color: #666;
+            line-height: 1.6;
+            max-width: 340px;
+            text-align: justify;
+        }
+
+        .timeline-highlight {
+            color: #000;
+            font-weight: 500;
+        }
+
+        .bullet-points {
+            list-style-type: disc;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline {
+                margin-top: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-title {
+                font-size: 4rem;
+            }
+            
+            .name {
+                font-size: 1.5rem;
+            }
+            
+            .role {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="nav-logo">
-            <img src="./assets/logo.png" alt="Logo" class="header-logo large">
-        </a>
-        <a href="about.html" class="about-btn">About Me</a>
-    </header>
-    
-    <main class="container">
-        <div class="profile-section">
-            <div class="profile-image">
-                <img src="./assets/profile.png" alt="CA Darpan Jain">
+    <div class="main-content">
+        <div class="header">
+            <div class="title-container">
+                <h1 class="portfolio-title"><span class="name-bold">Darpan</span><span class="name-light"> Jain</span>.</h1>
+                <span class="year">2001-Present</span>
             </div>
-            <h1 class="profile-name">CA Darpan Jain</h1>
-            <h2>A Human</h2>
-            
-            <nav class="social-links">
-                <a href="https://www.linkedin.com/in/cadarpanjain/" target="_blank" class="social-icon">
-                    <img src="./assets/linkedin logo.png" alt="LinkedIn" class="social-logo">
-                </a>
-                <a href="https://x.com/Darpanjaiin" target="_blank" class="social-icon">
-                    <img src="./assets/x logo.png" alt="X (Twitter)" class="social-logo">
-                </a>
-                <div class="gmail-icon social-icon">
-                    <img src="./assets/gmail.png" alt="Gmail" class="social-logo">
-                    <span class="tooltip">acadarpanjain@gmail.com</span>
-                </div>
-            </nav>
         </div>
 
-        <section class="blog-preview">
-            <h3>Perspectives</h3>
-            <ul>
-                <li><a href="essay1.html">The Day I Stood Tall on My Hands</a></li>
-                <li><a href="essay2.html">Crushing CA in first shot : How Manifestation works</a></li>
-                <li><a href="essay3.html">A Night to Remember: The Bioluminescent Kayak Adventure</a></li>
-                <li><a href="essay4.html">The Art of Smart Guesses</a></li>
+        <div class="info">
+            <h2 class="name">Chartered Accountant</h2>
+            <p class="role">CFA L2 Candidate</p>
+            <div class="social-links">
+                <a href="https://twitter.com/Darpanjaiin" target="_blank" title="X (formerly Twitter)">
+                    <svg class="x-logo" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/cadarpanjain/" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <div class="gmail-tooltip">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span class="tooltip-text">acadarpanjain@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item" style="animation-delay: 0.1s;">
+            <div class="timeline-date">2001</div>
+            <h3 class="timeline-title">Hello World!</h3>
+            <p class="timeline-description">Born in Pune, just a kid armed with a cricket bat and an endless stash of chocolates. Most of my early years were spent mastering the fine art of causing chaos—especially during nap time.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.2s;">
+            <div class="timeline-date">2003</div>
+            <h3 class="timeline-title">First Day of School</h3>
+            <p class="timeline-description">School was fun, mostly because of <span class="timeline-highlight">cricket</span> during breaks and the joy of finishing tiffin before class started. I wasn't exactly the top scorer in class, but on the cricket field, I ruled (or at least I thought I did).</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.3s;">
+            <div class="timeline-date">2017</div>
+            <h3 class="timeline-title">Passed 10th Grade</h3>
+            <p class="timeline-description">10th-grade board exams felt like the biggest challenge ever... until I realized life had bigger tests coming. Celebrated by escaping to <span class="timeline-highlight">Manali, Himachal Pradesh</span>.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.4s;">
+            <div class="timeline-date">2019</div>
+            <h3 class="timeline-title">The Year I Grew Up (Kind Of)</h3>
+            <p class="timeline-description">Passed 12th grade and entered the world of CA preparation—a land where weekends don't exist, and the dining table quietly turned into my study headquarters. <span class="timeline-highlight">Cleared CA Foundation (first attempt)</span> and felt invincible for a week. Also learned <span class="timeline-highlight">Muay Thai</span> because why not? Wanted to kick like Bruce Lee... ended up with sore legs instead.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.5s;">
+            <div class="timeline-date">2020</div>
+            <h3 class="timeline-title">CA Intermediate & 7 Exemptions</h3>
+            <p class="timeline-description"><span class="timeline-highlight">Cleared CA Intermediate (first attempt)</span> and thought, "Wow, maybe I'm actually good at this?" 7 exemptions were proof that hard work and some exam-day luck can do wonders.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.6s;">
+            <div class="timeline-date">2021</div>
+            <h3 class="timeline-title">First Real Job (Welcome to Reality)</h3>
+            <p class="timeline-description">Started the year scaling Chandrashila Summit—every step felt rewarding. Later, joined <span class="timeline-highlight">Khandelwal Jain & Associates</span>, a 50-year-old reputed CA firm, as an intern. Got assigned to audit a real estate giant, where I learned two crucial lessons:</p>
+            <ul class="bullet-points">
+                <li>Excel can be your best friend or your worst nightmare</li>
+                <li>Audits are basically treasure hunts (except the treasure is accounting mistakes)</li>
             </ul>
-        </section>
-
-        <footer class="contact-section" id="contact">
-            <h3 class="section-header">Get in touch</h3>
-            <form action="https://formspree.io/f/xwpklevj" method="POST">
-                <div class="form-row">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit" class="submit-button">Connect</button>
-                </div>
-                <div class="form-row">
-                    <input type="text" name="message" placeholder="Enter your message" required>
-                    <button type="submit" class="submit-button">Submit</button>
-                </div>
-            </form>
-        </footer>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p style="text-align: center;">Coded & designed by CA Darpan Jain © 2024</p>
-            <div class="social-links" style="justify-content: center;">
-                <a href="https://www.linkedin.com/in/cadarpanjain/" class="social-icon">
-                    <img src="./assets/linkedin logo.png" alt="LinkedIn" class="social-logo">
-                </a>
-                <a href="https://x.com/Darpanjaiin" class="social-icon">
-                    <img src="./assets/x logo.png" alt="X (Twitter)" class="social-logo">
-                </a>
-                <div class="gmail-icon social-icon">
-                    <img src="./assets/gmail.png" alt="Gmail" class="social-logo">
-                    <span class="tooltip">acadarpanjain@gmail.com</span>
-                </div>
-            </div>
         </div>
-    </footer>
+
+        <div class="timeline-item" style="animation-delay: 0.7s;">
+            <div class="timeline-date">2022</div>
+            <h3 class="timeline-title">Surfing & CFA</h3>
+            <p class="timeline-description"><span class="timeline-highlight">CFA Level 1</span>, landing in the top 10 percentile globally—felt that I unlocked a new level in life. Took a 3-day <span class="timeline-highlight">ocean surfing</span> course at Mulki, Karnataka. Learned that falling into water repeatedly is surprisingly fun. Surfing taught me patience and how to laugh at myself—a skill I badly needed. <span class="timeline-highlight">Graduated</span> as a Bachelor in Commerce from Pune University.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.8s;">
+            <div class="timeline-date">2024</div>
+            <h3 class="timeline-title">The Year of Big Moves</h3>
+            <p class="timeline-description">Finished my 3-year articleship and <span class="timeline-highlight">cleared CA Final (first attempt, 7 exemptions)</span>. Joined <span class="timeline-highlight">Deloitte</span> in April 2024 as an Assistant Manager. The corporate world was fast-paced and intense, but something inside me wanted more than PowerPoint decks and review notes.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 0.9s;">
+            <div class="timeline-date">September 2024</div>
+            <h3 class="timeline-title">Hit the Reset Button</h3>
+            <p class="timeline-description">Left Deloitte—to reset, rebuild and rethink. Learned to <span class="timeline-highlight">code</span>, built websites for myself and <a href="https://advsanjayjain.in" target="_blank" style="color: inherit; text-decoration: underline;">Dad's law practice</a>. Building things from scratch felt far more exciting than reviewing balance sheets.</p>
+        </div>
+
+        <div class="timeline-item" style="animation-delay: 1s;">
+            <div class="timeline-date">2025</div>
+            <h3 class="timeline-title">What's Next?</h3>
+            <p class="timeline-description">Studying for <span class="timeline-highlight">CFA Level 2</span>, but leaving room for surprises. Plans? Still evolving. Figuring it out is part of the adventure.</p>
+        </div>
+    </div>
 </body>
 </html> 
