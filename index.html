@@ -22,7 +22,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             padding: 5vh 5vw;
             background-color: white;
             color: #000;
@@ -31,10 +31,20 @@
             grid-template-columns: 1fr 400px;
             gap: 60px;
             overflow-x: hidden;
+            line-height: 1.35;
         }
 
-        .main-content {
-            padding-right: 20px;
+        .main-content, .info, .role, .blog-section, .blog-card, .blog-link, .timeline, .timeline-item, .timeline-title, .timeline-description, .timeline-highlight, .bullet-points, .footer, .footer-content, .social-links, .read-more, .blog-excerpt, .blog-title, .blog-heading, .blog-date, .blog-meta, .back-link, .blog-content, .blog-content p {
+            font-family: inherit !important;
+        }
+
+        .blog-content p, .timeline-description, .blog-excerpt, .blog-card p {
+            margin-bottom: 1.1em;
+            line-height: 1.35;
+        }
+
+        .portfolio-title {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
         }
 
         .header {
@@ -340,13 +350,19 @@
         </div>
 
         <div class="info">
-            <h2 class="name">Chartered Accountant</h2>
+            <h2 class="name">A human</h2>
             
             <div class="blog-section">
                 <h3 class="blog-heading"></h3>
                 <div class="blog-card">
+                    <a href="bioluminescence.html" class="blog-link">
+                        <h4 class="blog-title">That One Night I Still Don't Know How to Explain</h4>
+                        <p class="blog-excerpt">A story about bioluminescent waters, mysterious thuds, and the beauty of unexplained moments...</p>
+                        <span class="read-more">Read <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+                <div class="blog-card">
                     <a href="ocean-surfing.html" class="blog-link">
-                        <span class="blog-date">April 2022</span>
                         <h4 class="blog-title">What The Ocean Taught Me</h4>
                         <p class="blog-excerpt">A story about surfing, salt water, and life lessons from the Arabian Sea...</p>
                         <span class="read-more">Read <i class="fa-solid fa-arrow-right"></i></span>
@@ -354,8 +370,7 @@
                 </div>
                 <div class="blog-card">
                     <a href="strangers-in-varkala.html" class="blog-link">
-                        <span class="blog-date">May 2023</span>
-                        <h4 class="blog-title">Strangers in Varkala</h4>
+                        <h4 class="blog-title">I Almost Lost My Phone in Varkala. But Found Something Else.</h4>
                         <p class="blog-excerpt">A story about lost phones and found humanity at Varkala, Kerala...</p>
                         <span class="read-more">Read <i class="fa-solid fa-arrow-right"></i></span>
                     </a>
@@ -383,7 +398,7 @@
         <div class="timeline-item" style="animation-delay: 0.1s;">
             <div class="timeline-date">2001</div>
             <h3 class="timeline-title">Hello World!</h3>
-            <p class="timeline-description">Born in Pune, just a kid armed with endless stash of chocolates. Most of my early years were spent mastering the fine art of causing chaos—especially during nap time.</p>
+            <p class="timeline-description">Born in Pune, just a kid armed with endless stash of chocolates. Most of my early years were spent mastering the fine art of causing chaos, especially during nap time.</p>
         </div>
 
         <div class="timeline-item" style="animation-delay: 0.2s;">
@@ -401,7 +416,7 @@
         <div class="timeline-item" style="animation-delay: 0.4s;">
             <div class="timeline-date">2019</div>
             <h3 class="timeline-title">The Year I Grew Up (Kind Of)</h3>
-            <p class="timeline-description">Passed 12th grade and entered the world of CA preparation—a land where weekends don't exist, and the dining table quietly turned into my study headquarters. <span class="timeline-highlight">Cleared CA Foundation (first attempt)</span> and felt invincible for a week. Also learned <span class="timeline-highlight">Muay Thai</span> because why not? Wanted to kick like Bruce Lee... ended up with sore legs instead.</p>
+            <p class="timeline-description">Passed 12th grade and entered the world of CA preparation. A land where weekends don't exist, and the dining table quietly turned into my study headquarters. <span class="timeline-highlight">Cleared CA Foundation (first attempt)</span> and felt invincible for a week. Also learned <span class="timeline-highlight">Muay Thai</span> because why not? Wanted to kick like Bruce Lee... ended up with sore legs instead.</p>
         </div>
 
         <div class="timeline-item" style="animation-delay: 0.5s;">
@@ -413,17 +428,18 @@
         <div class="timeline-item" style="animation-delay: 0.6s;">
             <div class="timeline-date">2021</div>
             <h3 class="timeline-title">First Real Job (Welcome to Reality)</h3>
-            <p class="timeline-description">Started the year scaling Chandrashila Summit—every step felt rewarding. Later, joined <span class="timeline-highlight">Khandelwal Jain & Associates</span>, a 50-year-old reputed CA firm, as an intern. Got assigned to audit a real estate giant, where I learned two crucial lessons:</p>
+            <p class="timeline-description">Later, joined <span class="timeline-highlight">Khandelwal Jain & Associates</span>, a 50-year-old reputed CA firm, as an intern. Got assigned to audit a real estate giant, where I learned two crucial lessons:</p>
             <ul class="bullet-points">
                 <li>Excel can be your best friend or your worst nightmare</li>
                 <li>Audits are basically treasure hunts (except the treasure is accounting mistakes)</li>
             </ul>
+            <p class="timeline-description">Ended the year scaling <span class="timeline-highlight">Chandrashila summit</span> with a fractured hand, was tiring but felt rewarding.</p>
         </div>
 
         <div class="timeline-item" style="animation-delay: 0.7s;">
             <div class="timeline-date">2022</div>
             <h3 class="timeline-title">Surfing & CFA</h3>
-            <p class="timeline-description"><span class="timeline-highlight">Cracked CFA Level 1</span>, landing in the top 10 percentile globally—felt that I unlocked a new level in life. Took a 3-day <span class="timeline-highlight">ocean surfing</span> course at Mulki, Karnataka. Learned that falling into water repeatedly is surprisingly fun. Surfing taught me patience and how to laugh at myself—a skill I badly needed. <span class="timeline-highlight">Graduated</span> as a Bachelor in Commerce from Pune University.</p>
+            <p class="timeline-description"><span class="timeline-highlight">Cracked CFA Level 1</span>, landing in the top 10 percentile globally, felt that I unlocked a new level in life. Took a 3-day <span class="timeline-highlight">ocean surfing</span> course at Mulki, Karnataka. Learned that falling into water repeatedly is surprisingly fun. Surfing taught me patience and how to laugh at myself, a skill I badly needed. <span class="timeline-highlight">Graduated</span> as a Bachelor in Commerce from Pune University.</p>
         </div>
 
         <div class="timeline-item" style="animation-delay: 0.8s;">
@@ -435,13 +451,13 @@
         <div class="timeline-item" style="animation-delay: 0.9s;">
             <div class="timeline-date">September 2024</div>
             <h3 class="timeline-title">Hit the Reset Button</h3>
-            <p class="timeline-description">Left Deloitte—to reset, rebuild and rethink. Learned to <span class="timeline-highlight">code</span>, built websites for myself, <a href="https://advsanjayjain.in" target="_blank" style="color: inherit; text-decoration: underline;">Dad's law practice</a> and few small projects. Building things from scratch felt far more exciting than reviewing balance sheets.</p>
+            <p class="timeline-description">Left Deloitte : to reset, rebuild and rethink.<br> Learned to <span class="timeline-highlight">code</span>, built websites for myself, <a href="https://advsanjayjain.in" target="_blank" style="color: inherit; text-decoration: underline;">Dad's law practice</a> and few small projects. Building things from scratch felt far more exciting than reviewing balance sheets.</p>
         </div>
 
         <div class="timeline-item" style="animation-delay: 1s;">
             <div class="timeline-date">2025</div>
             <h3 class="timeline-title">What's Next?</h3>
-            <p class="timeline-description">Studying for <span class="timeline-highlight">CFA Level 2</span>, but leaving room for surprises. Plans? Still evolving. Figuring it out is part of the adventure.</p>
+            <p class="timeline-description">Studying for <span class="timeline-highlight">CFA Level 2</span>, indiehacking on the side, but leaving room for surprises. Plans? Still evolving. Figuring it out is part of the adventure.</p>
         </div>
     </div>
 </body>
